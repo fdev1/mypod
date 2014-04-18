@@ -1,21 +1,21 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 	<head>
-		<title>My Pod - dsPIC Based MP3 Player</title>
+		<title>MyPod - dsPIC Based Single Chip DIY MP3 Player with LCD</title>
 	</head>
 	<body style="font-family:Trebuchet MS; font-sie:12pt; margin:25px;">
 		<table cellpadding="0" cellspacing="0">
 			<tr>
-				<td><h1>MyPod - dsPIC Based MP3 Player</h1></td>
+				<td><h1>MyPod - dsPIC Based Single Chip DIY MP3 Player with LCD</h1></td>
 			</tr>
 			<tr>
 				<td>
-					<iframe width="640" height="430" src="//www.youtube.com/embed/t7oPDjCjdi8" frameborder="0" allowfullscreen></iframe>
+					<iframe width="640" height="430" src="//www.youtube.com/embed/tk1ZwGCbz4Q" frameborder="0" allowfullscreen></iframe>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<h2>Project Description</h2>
+					<h2>Project Description<hr /></h2>
 				</td>
 			</tr>
 			<tr>
@@ -23,27 +23,75 @@
 					<p style="text-align:justify;">
 						This is a simple single-chip MP3 player using a dsPIC33E512GP502. It should
 						also work with a dsPIC33F with some modifications to the code (the DMA on the dsPIC33F
-						can only access dual-ported RAM (up to 4KB) which is not enough for 2x2 channel buffers
-						(for ping-pong), so we'll have to modify the code to deal
-						with that. Besides the dsPIC with used an ILI9341 LCD (about $6 on eBay) and an
-						op-amp and microphone for recording, plus a few discrete components. The software
-						source code is available on GitHub (see link below) and schematics will be available
-						soon).
+						can only access dual-ported RAM (up to 4KB) which is not enough for the two buffers
+						used for ping-pong (1152 16-bit samples for each channel), so we'll have to modify the code 
+						to deal with that. Besides the dsPIC and a few discrete components an ILI9341 SPI LCD module 
+						(about $6 on eBay) and an op-amp and microphone for recording (optional).
+					</p>
+					<p style="text-align:justify">
+						It uses the <a href="http://fernansoft.com/mp3lib.aspx" target="_blank">MP3Lib Library</a> for MP3 decoding and the 
+						<a href="http://fernansoft.com/fat32lib.aspx" target="_blank">Fat32Lib Library</a> for accessing audio files from an
+						SD card. It uses the PWM module on the dsPIC to output the audio, so it must first be truncated to 8 bits. For
+						good quality audio you should either use an external codec or at least use the DAC peripheral on the dsPIC. We
+						used PWM because it is only intended to demostrate the MP3Lib library. The current version only outputs one channel 
+						(it decodes both) but adding the other channel should be very straight forward and will be done in a future release 
+						(as well as the dsPIC DAC and external codec support).
 					</p>
 				</td>
 			</tr>
 			<tr>
-				<td><h2>Software Requirements</h2></td>
+				<td><h2>Software Requirements<hr /></h2></td>
 			</tr>
 			<tr>
 				<td>
 					<ul>
-						<li>MP3Lib Decoding Library - Free download (for personal use only) from <a href="http://fernansoft.com/mp3lib.aspx">FernanSoft Technology</a>;</li>
-						<li>Fat32Lib File System Library - Free download (personal use) from <a href="http://fernansoft.com/fat32lib.aspx">FernanSoft Technology</a>;</li>
-						<li>LGLib - LCD Driver and Font Library</li>
-						<li>MyPOD Source Code</li>
-						<li>XC16 Compiler - Free download from <a href="http://microchip.com">Microchip</a></li>.
+						<li>
+							MP3Lib Decoding Library - Free download (for personal use only) from 
+							<a href="http://fernansoft.com/mp3lib.aspx" target="_blank">http://fernansoft.com/mp3lib.aspx</a>;
+						</li>
+						<li>
+							Fat32Lib File System Library - Free download (GPLv3) from 
+							<a href="http://fernansoft.com/fat32lib.aspx" target="_blank">http://fernansoft.com/fat32lib.aspx</a>;
+						</li>
+						<li>
+							LGLib - LCD Driver and Font Library - Available at
+							<a href="https://github.com/fernando-rodriguez/lglib" target="_blank">https://github.com/fernando-rodriguez/lglib</a>;
+						</li>
+						<li>
+							MyPod Source Code - Available at 
+							<a href="https://github.com/fernando-rodriguez/mypod" target="_blank">https://github.com/fernando-rodriguez/mypod</a>
+						</li>
+						<li>
+							XC16 Compiler - Free download from 
+							<a href="https://www.microchip.com/pagehandler/en_us/devtools/mplabxc/" target="_blank">https://www.microchip.com/pagehandler/en_us/devtools/mplabxc/</a>.
+						</li>
 					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><h2>Hardware Requirements<hr /></h2></td>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li>
+							dsPIC33E (or with some modifications dsPIC33F) with 25 KB RAM and 170KB ROM.
+							This can be improved to about 18 KB RAM or less as this version wastes a lot
+							of memory.
+						</li>
+						<li>ILI9341 SPI LCD Module;</li>
+						<li>dsPIC programmer;</li>
+						<li>A few resistors and capacitors plus a couple transistors;</li>
+						<li>An optional op-amp and microphone for recording.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><h2>Cost<hr /></h2></td>
+			</tr>
+			<tr>
+				<td>
+					<p>Under $20.</p>
 				</td>
 			</tr>
 		</table>
