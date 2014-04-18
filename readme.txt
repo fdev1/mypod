@@ -34,15 +34,22 @@ Software Requirements:
 
 2. Fat32Lib - Free download (GPL) from 
    www.fernansoft.com/fat32lib.aspx
+   
+3. LGLib - LCD Driver and font library - 
+   https://github.com/fernando-rodriguez/lglib
 
-3. XC16 Compiler - Free download from microchip.com
+3. XC16 Compiler - Free download from 
+   https://www.microchip.com/pagehandler/en_us/devtools/mplabxc/
 
 
 Hardware/Component Requirements:
-======================
+================================
+Note: schematic will be available soon.
 
 1. dsPIC33F or dsPIC33E with 32KB RAM
 2. ILI9341 SPI LCD
 3. Breadboard
 4. 1 transistor/few resistors and caps
 5. 4 push buttons
+6. dsPIC programmer
+
