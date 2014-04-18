@@ -1,8 +1,51 @@
-<html>
-  <head>
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <span>Hello MyPOD World!</span>
-  </body>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<title>My Pod - dsPIC Based MP3 Player</title>
+	</head>
+	<body style="font-family:Trebuchet MS; font-sie:12pt; margin:25px;">
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td><h1>MyPod - dsPIC Based MP3 Player</h1></td>
+			</tr>
+			<tr>
+				<td>
+					<iframe width="640" height="430" src="//www.youtube.com/embed/t7oPDjCjdi8" frameborder="0" allowfullscreen></iframe>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2>Project Description</h2>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align:justify;">
+						This is a simple single-chip MP3 player using a dsPIC33E512GP502. It should
+						also work with a dsPIC33F with some modifications to the code (the DMA on the dsPIC33F
+						can only access dual-ported RAM (up to 4KB) which is not enough for 2x2 channel buffers
+						(for ping-pong), so we'll have to modify the code to deal
+						with that. Besides the dsPIC with used an ILI9341 LCD (about $6 on eBay) and an
+						op-amp and microphone for recording, plus a few discrete components. The software
+						source code is available on GitHub (see link below) and schematics will be available
+						soon).
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td><h2>Software Requirements</h2></td>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li>MP3Lib Decoding Library - Free download (for personal use only) from <a href="http://fernansoft.com/mp3lib.aspx">FernanSoft Technology</a>;</li>
+						<li>Fat32Lib File System Library - Free download (personal use) from <a href="http://fernansoft.com/fat32lib.aspx">FernanSoft Technology</a>;</li>
+						<li>LGLib - LCD Driver and Font Library</li>
+						<li>MyPOD Source Code</li>
+						<li>XC16 Compiler - Free download from <a href="http://microchip.com">Microchip</a></li>.
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
 </html>
