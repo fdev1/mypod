@@ -127,8 +127,8 @@
 // LCD headers
 */ 
 #if defined(USE_ILI9341)
-	#include <ili9341.h>
-	#include <lg.h>
+	#include <ili9341/ili9341.h>
+	#include <lglib/lg.h>
 #elif defined(EXPLORER16)
 	#include <lcd.h>
 #endif
@@ -147,11 +147,11 @@
 /*
 // Fat32Lib includes
 */
-#include <sd.h>
-#include <storage_device.h>
-#include <fat.h>
-#include <filesystem_interface.h>
-#include <sm.h>
+#include <sdlib/sd.h>
+#include <fat32lib/storage_device.h>
+#include <fat32lib/fat.h>
+#include <fat32lib/filesystem_interface.h>
+#include <smlib/sm.h>
 
 #include "audio.h"
 

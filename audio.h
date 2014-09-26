@@ -17,11 +17,11 @@
  *
  */
 
-#include "..\sdlib\sd.h"
-#include "..\fat32lib\storage_device.h"
-#include "..\fat32lib\fat.h"
-#include "..\fat32lib\filesystem_interface.h"
-#include "..\smlib\sm.h"
+#include <sdlib/sd.h>
+#include <fat32lib/storage_device.h>
+#include <fat32lib/fat.h>
+#include <fat32lib/filesystem_interface.h>
+#include <smlib/sm.h>
 
 typedef void (*AUDIO_PLAYBACK_COMPLETED)(SM_FILE* file);
 

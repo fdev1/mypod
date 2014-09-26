@@ -26,16 +26,16 @@
 	//#define MP3_OUTPUT_TO_FILE
 #endif
 
-#include <common.h>
-#include <dma.h>
-#include <rtc.h>
-#include <spi.h>
+#include <dspic_hal/common.h>
+#include <dspic_hal/dma.h>
+#include <dspic_hal/rtc.h>
+#include <dspic_hal/spi.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include "audio.h"
-#include <ili9341.h>
-#include <sd.h>
+#include <ili9341/ili9341.h>
+#include <sdlib/sd.h>
 
 #if defined(SUPPORT_MP3)
 	#include <mp3.h>
